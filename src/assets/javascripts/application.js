@@ -47,6 +47,71 @@ import FastClick from "fastclick"
 import Material from "./components/Material"
 
 /* ----------------------------------------------------------------------------
+ * Highlight.js
+ * ------------------------------------------------------------------------- */
+
+/* Import Highlight.js and languages from node_modules */
+import hljs from "highlight.js/lib/highlight.js"
+import hljs_pony from "highlight.js/lib/languages/pony"
+import hljs_cpp from "highlight.js/lib/languages/cpp"
+import hljs_json from "highlight.js/lib/languages/json"
+import hljs_bash from "highlight.js/lib/languages/bash"
+import hljs_markdown from "highlight.js/lib/languages/markdown"
+/* Register all languages plus pony-full-source */
+hljs.registerLanguage("pony", hljs_pony);
+hljs.registerLanguage("pony-full-source", hljs_pony);
+hljs.registerLanguage("cpp", hljs_cpp);
+hljs.registerLanguage("json", hljs_json);
+hljs.registerLanguage("bash", hljs_bash);
+hljs.registerLanguage("markdown", hljs_markdown);
+const hljs_code_blocks = document.querySelectorAll("pre code")
+Array.prototype.forEach.call(hljs_code_blocks, code_block => {
+  hljs.highlightBlock(code_block)
+  /* Add CodeHilite format only to Pony full source code blocks */
+  if (!(code_block.classList.contains("pony-full-source"))) return
+  /* Add no-sidebar class when displaying full source code */
+  const content = document.querySelector(".md-content:not(.no-sidebar)")
+  if (content) {
+    content.classList.add("no-sidebar")
+  }
+  /* Add codehilite class to code block */
+  const code_pre = code_block.parentNode
+  code_pre.className = "codehilite"
+  /* Generate line numbers with links and anchors */
+  const line_number_pre = document.createElement("pre")
+  const line_count = code_block.innerText.split("\n").length - 1
+  for (var i = 1; i <= line_count; i++) {
+    const line_number = (
+      <div id={`L${i}`}>
+        <a href={`#L${i}`}>
+          {i}
+        </a>
+      </div>
+    )
+    line_number_pre.appendChild(line_number)
+  }
+  /* Create full CodeHilite table */
+  const codehilite_table = (
+    <table class="codehilitetable">
+      <tbody>
+        <tr>
+          <td class="linenos">
+            <div class="linenodiv">
+              {line_number_pre}
+            </div>
+          </td>
+          <td class="code">
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  )
+  /* Replace previous code block with CodeHilite table */
+  code_pre.parentNode.insertBefore(codehilite_table, code_pre)
+  codehilite_table.querySelector("td.code").appendChild(code_pre)
+})
+
+/* ----------------------------------------------------------------------------
  * Functions
  * ------------------------------------------------------------------------- */
 

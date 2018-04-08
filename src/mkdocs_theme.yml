@@ -36,10 +36,10 @@ feature:
 # documentation - possible values can be looked up in the getting started guide
 palette:
 
-  # Primary color used for header, sidebar and links, default: indigo
+  # Primary color used for header, sidebar and links, default: brown
   primary:
 
-  # Accent color for highlighting user interaction, default: indigo
+  # Accent color for highlighting user interaction, default: amber
   accent:
 
 # Fonts used by Material, automatically loaded from Google Fonts - see the site

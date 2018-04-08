@@ -103,6 +103,7 @@ $codehilite-literal-string-symbol: #0D904F;
 // Miscellaneous
 $codehilite-error: #A61717;
 $codehilite-whitespace: transparent;
+$codehilite-anchor-offset: 6.0rem;
 
 // ----------------------------------------------------------------------------
 // Rules: syntax highlighting
@@ -298,6 +299,12 @@ $codehilite-whitespace: transparent;
     // Add spacing to line number container
     .linenodiv {
       padding: 1.05rem 1.2rem;
+
+      // Correct anchor offset
+      div {
+        margin-top: -($codehilite-anchor-offset);
+        padding-top: ($codehilite-anchor-offset);
+      }
     }
 
     // Disable user selection, so code can be easily copied without

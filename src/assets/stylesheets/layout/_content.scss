@@ -93,3 +93,8 @@
     }
   }
 }
+
+// Expanded content container when there is no sidebar
+.md-content.no-sidebar {
+  margin-right: 0;
+}
