@@ -41,4 +41,4 @@ __pycache__
 
 # Distribution files
 /dist
-/mkdocs_ponylang.egg-info
+/mkdocs_ponylang_material.egg-info

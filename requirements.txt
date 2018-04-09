@@ -23,5 +23,9 @@ mkdocs>=0.17.1
 Pygments>=2.2
 pymdown-extensions>=3.4
 
+# PyPI publishing
+twine>=1.11.0
+wheel>=0.31.0
+
 # Temporary fix for build errors on Travis
 tornado<5

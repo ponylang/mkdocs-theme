@@ -8,7 +8,7 @@ MkDocs of the Ponylang Standard Library documentation.
 Install the theme from PyPI:
 
 ```sh
-pip install mkdocs-ponylang
+pip install mkdocs-ponylang-material
 ```
 
 In your `mkdocs.yml` file, change the theme:
@@ -40,4 +40,13 @@ Compile files from `src/` with Webpack:
 
 ```sh
 npm run build
+```
+
+### Distribution
+
+Upload to PyPI with Twine:
+
+```sh
+python setup.py sdist bdist_wheel
+twine upload dist/*
 ```

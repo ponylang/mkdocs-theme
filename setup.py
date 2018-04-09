@@ -32,6 +32,10 @@ with open("requirements.txt") as data:
             if line and not line.startswith("#")
     ]
 
+# Load README.md contents
+with open("README.md") as data:
+    readme = data.read()
+
 # Package description
 setup(
     name = package["name"],
@@ -39,6 +43,7 @@ setup(
     url = package["homepage"],
     license = package["license"],
     description = package["description"],
+    long_description = readme,
     author = package["author"]["name"],
     author_email = package["author"]["email"],
     keywords = package["keywords"],
