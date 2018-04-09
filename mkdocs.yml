@@ -50,14 +50,15 @@ theme:
   feature:
     tabs: true
   palette:
-    primary: indigo
-    accent: indigo
+    primary: brown
+    accent: amber
   font:
     text: Roboto
     code: Roboto Mono
   favicon: assets/images/favicon.png
   logo:
     icon: "\uE80C"
+  max_toc_depth: 2
 
 # Customization
 extra:

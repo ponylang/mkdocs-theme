@@ -36,12 +36,20 @@
     {% set toc_ = (toc_ | first).children %}
   {% endif %}
 
+  <!-- Get maximum depth for the table of contents -->
+  {% set max_toc_depth = config.theme.max_toc_depth %}
+  {% if max_toc_depth is lessthan 1 %}
+    {% set max_toc_depth = 100 %}
+  {% endif %}
+
   <!-- Render item list -->
   {% if toc_ | first is defined %}
     <label class="md-nav__title" for="toc">{{ lang.t("toc.title") }}</label>
     <ul class="md-nav__list" data-md-scrollfix>
       {% for toc_item in toc_ %}
-        {% include "partials/toc-item.html" %}
+        {% with level = max_toc_depth - 1 %}
+          {% include "partials/toc-item.html" %}
+        {% endwith %}
       {% endfor %}
 
       <!-- Source files -->

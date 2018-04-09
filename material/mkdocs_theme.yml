@@ -53,12 +53,11 @@ font:
   code: Roboto Mono
 
 # Favicon to be rendered
-favicon: assets/images/favicon.png
+favicon: assets/images/logo.png
 
 # The logo of the documentation shown in the header and navigation can either
 # be a Material Icon ligature (see https://material.io/icons/) or an image URL
-logo:
-  icon: "\uE80C"
+logo: assets/images/logo.png
 
 # Material includes the search in the header as a partial, not as a separate
 # template, so it's correct that search.html is missing
@@ -71,3 +70,7 @@ search_index_only: true
 # Static pages to build
 static_templates:
   - 404.html
+
+# Maximum depth of items in the table of contents. This setting is ignored
+# if the value is zero or negative
+max_toc_depth: 2

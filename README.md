@@ -1,7 +1,7 @@
 # Ponylang Mkdocs Theme
 
 A customized theme based off https://github.com/squidfunk/mkdocs-material for
-the MkDocs of the Pony language stdlib documentation.
+MkDocs of the Ponylang Standard Library documentation.
 
 ## Usage
 

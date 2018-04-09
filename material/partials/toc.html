@@ -4,11 +4,17 @@
   {% if toc_ | first is defined and "\x3ch1 id=" in page.content %}
     {% set toc_ = (toc_ | first).children %}
   {% endif %}
+  {% set max_toc_depth = config.theme.max_toc_depth %}
+  {% if max_toc_depth is lessthan 1 %}
+    {% set max_toc_depth = 100 %}
+  {% endif %}
   {% if toc_ | first is defined %}
     <label class="md-nav__title" for="toc">{{ lang.t("toc.title") }}</label>
     <ul class="md-nav__list" data-md-scrollfix>
       {% for toc_item in toc_ %}
-        {% include "partials/toc-item.html" %}
+        {% with level = max_toc_depth - 1 %}
+          {% include "partials/toc-item.html" %}
+        {% endwith %}
       {% endfor %}
       {% if page.meta.source and page.meta.source | length > 0 %}
         <li class="md-nav__item">
