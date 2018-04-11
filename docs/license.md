@@ -2,6 +2,7 @@
 
 **MIT License**
 
+Copyright &copy; 2018 -      The Pony Developers
 Copyright &copy; 2016 - 2017 Martin Donath
 
 Permission is hereby granted, free of charge, to any person obtaining a copy

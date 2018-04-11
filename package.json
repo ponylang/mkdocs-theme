@@ -1,6 +1,6 @@
 {
   "name": "mkdocs-ponylang",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Ponylang Material theme for MkDocs",
   "keywords": [
     "mkdocs",
@@ -8,20 +8,18 @@
     "theme",
     "ponylang"
   ],
-  "homepage": "https://github.com/epiceric/ponylang-mkdocs-theme",
+  "homepage": "https://github.com/ponylang/mkdocs-theme",
   "bugs": {
-    "url": "https://github.com/epiceric/ponylang-mkdocs-theme",
-    "email": "ericpires9@gmail.com"
+    "url": "https://github.com/ponylang/mkdocs-theme/issues"
   },
   "license": "MIT",
   "author": {
-    "name": "Eric Rodrigues Pires",
-    "email": "ericpires9@gmail.com"
+    "name": "The Pony Developers"
   },
   "contributors": [],
   "repository": {
     "type": "git",
-    "url": "https://github.com/epiceric/ponylang-mkdocs-theme.git"
+    "url": "https://github.com/ponylang/mkdocs-theme.git"
   },
   "scripts": {
     "build": "make clean build",
