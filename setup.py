@@ -22,18 +22,18 @@ import json
 from setuptools import setup, find_packages
 
 # Load package.json contents
-with open("package.json") as data:
+with open('package.json', 'r') as data:
     package = json.load(data)
 
 # Load list of dependencies
-with open("requirements.txt") as data:
+with open('requirements.txt', 'r') as data:
     install_requires = [
         line for line in data.read().split("\n")
             if line and not line.startswith("#")
     ]
 
 # Load README.md contents
-with open("README.md") as data:
+with open('README.md', 'r') as data:
     readme = data.read()
 
 # Package description
@@ -44,6 +44,7 @@ setup(
     license = package["license"],
     description = package["description"],
     long_description = readme,
+    long_description_content_type = "text/markdown",
     author = package["author"]["name"],
     author_email = package["author"]["email"],
     keywords = package["keywords"],

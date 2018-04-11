@@ -1,6 +1,6 @@
 # Ponylang Mkdocs Theme
 
-A customized theme based off https://github.com/squidfunk/mkdocs-material for
+A customized theme based on https://github.com/squidfunk/mkdocs-material for
 MkDocs of the Ponylang Standard Library documentation.
 
 ## Usage
@@ -8,7 +8,7 @@ MkDocs of the Ponylang Standard Library documentation.
 Install the theme from PyPI:
 
 ```sh
-pip install mkdocs-ponylang-material
+pip install mkdocs-ponylang
 ```
 
 In your `mkdocs.yml` file, change the theme:
@@ -47,6 +47,7 @@ npm run build
 Upload to PyPI with Twine:
 
 ```sh
+rm dist/*
 python setup.py sdist bdist_wheel
 twine upload dist/*
 ```

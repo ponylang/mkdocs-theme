@@ -1,7 +1,7 @@
 {
-  "name": "mkdocs-ponylang-material",
+  "name": "mkdocs-ponylang",
   "version": "0.1.0",
-  "description": "MkDocs theme for Ponylang",
+  "description": "Ponylang Material theme for MkDocs",
   "keywords": [
     "mkdocs",
     "documentation",
