@@ -1,3 +1,4 @@
+# Copyright (c) 2018, The Pony Developers
 # Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -20,6 +21,7 @@
 
 FROM jfloff/alpine-python:2.7-slim
 MAINTAINER Martin Donath <martin.donath@squidfunk.com>
+MAINTAINER Matthias Wahl <pony@m7w3.de>
 
 # Set build directory
 WORKDIR /tmp

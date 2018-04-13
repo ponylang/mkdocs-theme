@@ -1,4 +1,5 @@
 /*
+ * Copyright (c) 2018, THe Pony Developers
  * Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy

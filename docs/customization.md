@@ -186,7 +186,7 @@ In order to start development on the Material theme, a [Node.js][8] version of
 at least 8 is required. First, clone the repository:
 
 ``` sh
-git clone https://github.com/squidfunk/mkdocs-material
+git clone https://github.com/ponylang/mkdocs-theme
 ```
 
 Next, all dependencies need to be installed, which is done with:

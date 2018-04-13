@@ -1,82 +1,78 @@
-# Contributing
+Contributing
+============
 
-Interested in contributing to the Material theme? Want to report a bug? Before
-you do, please read the following guidelines.
+It's good to hear that you want to contribute to Pony!
 
-## Submission context
+There are a number of ways to contribute to Pony. As this document is a little long, feel free to jump to the section that applies to you currently:
 
-### Got a question or problem?
+* [Feature request](#feature-request)
+* [Bug report](#bug-report)
+* [How to contribute](#how-to-contribute)
+* [Pull request](#pull-request)
 
-For quick questions there's no need to open an issue as you can reach us on
-[gitter.im][1].
+Additional notes regarding formatting:
 
-  [1]: https://gitter.im/squidfunk/mkdocs-material
+* [Documentation formatting](#documentation-formatting)
+* [Code formatting](#code-formatting)
 
-### Found a bug?
+Feature request
+---------------
 
-If you found a bug in the source code, you can help us by submitting an issue
-to the [issue tracker][2] in our GitHub repository. Even better, you can submit
-a Pull Request with a fix. However, before doing so, please read the
-[submission guidelines][3].
+Feature requests for the ponylang mkdocs theme can be submitted as issues or pull requests to the repository itself.
 
-  [2]: https://github.com/squidfunk/mkdocs-material/issues
-  [3]: #submission-guidelines
+Bug report
+----------
+First of all please [search existing issues](https://github.com/ponylang/mkdocs-theme/issues) to make sure your issue hasn't already been reported. If you cannot find a suitable issue — [create a new one](https://github.com/ponylang/mkdocs-theme/issues/new).
 
-### Missing a feature?
+Provide the following details:
 
-You can request a new feature by submitting an issue to our GitHub Repository.
-If you would like to implement a new feature, please submit an issue with a
-proposal for your work first, to be sure that it is of use for everyone, as
-the Material theme is highly opinionated. Please consider what kind of change
-it is:
+  - short summary of what you was trying to achieve,
+  - a link to the page causing the bug,
+  - expected result,
+  - actual results and
+  - browser and operationg system you were reproducing this buggy behaviour on
 
-* For a **major feature**, first open an issue and outline your proposal so
-  that it can be discussed. This will also allow us to better coordinate our
-  efforts, prevent duplication of work, and help you to craft the change so
-  that it is successfully accepted into the project.
+If possible, try to isolate the problem and provide just enough information to demonstrate it. Add any related information which might help to fix the issue.
 
-* **Small features and bugs** can be crafted and directly submitted as a Pull
-  Request. However, there is no guarantee that your feature will make it into
-  the master, as it's always a matter of opinion whether if benefits the
-  overall functionality of the theme.
+How to contribute
+-----------------
+We use a fairly standard GitHub pull request workflow. If you have already contributed to a project via GitHub pull request, you can skip this section and proceed to the [specific details of what we ask for in a pull request](#pull-request). If this is your first time contributing to a project via GitHub, read on.
 
-## Submission guidelines
+Here is the basic GitHub workflow:
 
-### Submitting an issue
+1. Fork the mkdocs-theme repo. you can do this via the GitHub website. This will result in you having your own copy of the mkdocs-theme repo under your GitHub account. 
+2. Clone your mkdocs-theme repo to your local machine
+3. Make a branch for your change
+4. Make your change on that branch
+5. Push your change to your repo
+6. Use the github ui to open a PR
 
-Before you submit an issue, please search the issue tracker, maybe an issue for
-your problem already exists and the discussion might inform you of workarounds
-readily available.
+Some things to note that aren't immediately obvious to folks just starting out:
 
-We want to fix all the issues as soon as possible, but before fixing a bug we
-need to reproduce and confirm it. In order to reproduce bugs we will
-systematically ask you to provide a minimal reproduction scenario using the
-custom issue template. Please stick to the issue template.
+1. Your fork doesn't automatically stay up to date with change in the main repo.
+2. Any changes you make on your branch that you used for the PR will automatically appear in the PR so if you have more than 1 PR, be sure to always create different braches for them.
+3. Weird things happen with commit history if you dont create your PR branches off of master so always make sure you have the master branch checked out before creating a branch for a PR
 
-Unfortunately we are not able to investigate / fix bugs without a minimal
-reproduction scenario, so if we don't hear back from you we may close the issue.
+If you feel overwhelmed at any point, don't worry, it can be a lot to learn when you get started. Feel free to reach out via [IRC](https://webchat.freenode.net/?channels=%23ponylang) or the [pony developer mailing list](https://pony.groups.io/g/dev) for assistance.
 
-### Submitting a Pull Request (PR)
+You can get help using GitHub via [the official documentation](https://help.github.com/). Some hightlights include:
 
-Search GitHub for an open or closed PR that relates to your submission. You
-don't want to duplicate effort. If you do not find a related issue or PR,
-go ahead.
+- [Fork A Repo](https://help.github.com/articles/fork-a-repo/)
+- [Creating a pull request](https://help.github.com/articles/creating-a-pull-request/)
+- [Syncing a fork](https://help.github.com/articles/syncing-a-fork/)
 
-1. **Development**: Fork the project, set up the [development environment][4],
-  make your changes in a separate git branch and add descriptive messages to
-  your commits.
+Pull request
+------------
+Before issuing a pull request we ask that you squash all your commits into a single logical commit. While your PR is in review, we may ask for additional changes, please do not squash those commits while the review is underway. Once everything is good, we'll then ask you to further squash those commits before merging. We ask that you not squash while a review is underway as it can make it hard to follow what is going on. Additionally, we ask that you:
 
-2. **Build**: Before submitting a pull requests, [build the theme][5]. This is
-  a mandatory requirement for your PR to get accepted, as the theme should at
-  all times be installable through GitHub.
+* [Write a good commit message](http://chris.beams.io/posts/git-commit/)
+* Issue 1 Pull Request per feature. Don't lump unrelated changes together.
 
-3. **Pull Request**: After building the theme, commit the compiled output, push
-  your branch to GitHub and send a PR to `mkdocs-material:master`. If we
-  suggest changes, make the required updates, rebase your branch and push the
-  changes to your GitHub repository, which will automatically update your PR.
+If you aren't sure how to squash multiple commits into one, Steve Klabnik wrote [a handy guide](http://blog.steveklabnik.com/posts/2012-11-08-how-to-squash-commits-in-a-github-pull-request) that you can refer to.
 
-After your PR is merged, you can safely delete your branch and pull the changes
-from the main (upstream) repository.
+We keep a [CHANGELOG](CHANGELOG.md) of all software changes with behavioural effects for the mkdocs-theme. 
+Please create a changelog entry for your PR if it is such a change.
 
-  [4]: http://squidfunk.github.io/mkdocs-material/customization/#environment-setup
-  [5]: http://squidfunk.github.io/mkdocs-material/customization/#build-process
+Please note, if your changes are purely to things like README, CHANGELOG etc, you can add [skip ci] as the last line of your commit message and your PR won't be run through our continuous integration systems. We ask that you use [skip ci] where appropriate as it helps to get changes through CI faster and doesn't waste resources that Appveyor and TravisCI are kindly donating to the Open Source community.
+
+Did we already mention that it is awesome that you think about contributing?
