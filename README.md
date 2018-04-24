@@ -26,8 +26,8 @@ You must have `virtualenv` and `npm` installed.
 This will set up all of the necessary packages to install the theme locally.
 
 ```sh
-git clone https://github.com/epiceric/ponylang-mkdocs-theme
-cd ponylang-mkdocs-theme
+git clone https://github.com/ponylang/mkdocs-theme
+cd mkdocs-theme
 virtualenv venv
 source venv/bin/activate
 pip install -e .
