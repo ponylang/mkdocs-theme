@@ -26,12 +26,12 @@ site_author: Martin Donath
 site_url: https://squidfunk.github.io/mkdocs-material/
 
 # Repository
-repo_name: squidfunk/mkdocs-material
-repo_url: https://github.com/squidfunk/mkdocs-material
+repo_name: ponylang/mkdocs-theme
+repo_url: https://github.com/ponylang/mkdocs-theme
 edit_uri: ""
 
 # Copyright
-copyright: 'Copyright &copy; 2016 - 2018 Martin Donath'
+copyright: 'Copyright &copy; 2018 The Pony Developers, &copy; 2016 - 2018 Martin Donath'
 
 # Configuration
 theme:
@@ -67,11 +67,9 @@ extra:
     - type: globe
       link: http://struct.cc
     - type: github-alt
-      link: https://github.com/squidfunk
+      link: https://github.com/ponylang
     - type: twitter
-      link: https://twitter.com/squidfunk
-    - type: linkedin
-      link: https://linkedin.com/in/squidfunk
+      link: https://twitter.com/ponylang
 
 # Extensions
 markdown_extensions:
@@ -117,7 +115,3 @@ pages:
   - Contributing: contributing.md
   - License: license.md
 
-# Google Analytics
-google_analytics:
-  - !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_KEY"]
-  - auto
