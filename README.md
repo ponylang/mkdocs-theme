@@ -14,8 +14,57 @@ pip install mkdocs-ponylang
 In your `mkdocs.yml` file, change the theme:
 
 ```yaml
-theme: ponylang
+theme:
+  name: ponylang
 ```
+
+### Customization
+
+#### Table of contents
+
+```yaml
+# Enable permalinks
+markdown_extensions:
+- markdown.extensions.toc:
+    permalink: true
+
+# Set maximum depth
+theme:
+  max_toc_depth: 2
+```
+
+#### Palette
+
+```yaml
+theme:
+  palette:
+    primary: brown
+    accent: amber
+```
+
+You can choose from primary and accent colors listed [here](https://squidfunk.github.io/mkdocs-material/getting-started/#color-palette).
+
+#### Icons
+
+```yaml
+theme:
+  favicon: asserts/image/logo.png
+  logo:
+     icon: cloud
+```
+
+Logos can be images or Material icons (more info [here](https://squidfunk.github.io/mkdocs-material/getting-started/#logo)).
+
+#### Source repository
+
+```yaml
+repo_name: ponylang/ponyc
+repo_url: https://github.com/ponylang/ponyc
+```
+
+#### Other customizations
+
+Extra customization options are available in the [Material theme documentation](https://squidfunk.github.io/mkdocs-material/getting-started/).
 
 ## Development
 
