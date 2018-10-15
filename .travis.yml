@@ -37,12 +37,9 @@ cache:
   directories:
     - node_modules
 
-before_install:
-  - pyenv install 3.7.0
-  - pyenv global 3.7.0
-
 # Install dependencies
 install:
+  - pyenv global 3.6
   - npm install
   - pip3 install --user -r requirements.txt
 
