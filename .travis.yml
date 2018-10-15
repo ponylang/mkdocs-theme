@@ -24,6 +24,7 @@ sudo: false
 
 # Node.js version and necessary services
 node_js: 10
+python: 3.7.0
 services:
   - docker
 
@@ -40,7 +41,7 @@ cache:
 # Install dependencies
 install:
   - npm install
-  - pip install --user -r requirements.txt
+  - pip3 install --user -r requirements.txt
 
 # Perform build
 script:
