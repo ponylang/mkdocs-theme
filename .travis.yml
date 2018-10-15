@@ -37,12 +37,18 @@ cache:
   directories:
     - node_modules
 
+before_install:
+  - pyenv install 3.7.0
+  - pyenv global 3.7.0
+
 # Install dependencies
 install:
   - npm install
-  - pyenv shell 3.6 && pip3 install --user -r requirements.txt
+  - pip3 install --user -r requirements.txt
 
-# Perform build
+# Perform build and test the python packaging
 script:
   - npm run lint
   - npm run build
+  - pip3 install -e .
+  - python setup.py sdist bdist_wheel
