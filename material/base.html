@@ -36,7 +36,7 @@
         <meta name="lang:{{ key }}" content="{{ lang.t(key) }}">
       {% endfor %}
       <link rel="shortcut icon" href="{{ base_url }}/{{ config.theme.favicon }}">
-      <meta name="generator" content="mkdocs-{{ mkdocs_version }}, mkdocs-ponylang-material-0.1.0">
+      <meta name="generator" content="mkdocs-{{ mkdocs_version }}, mkdocs-ponylang-0.1.0">
     {% endblock %}
     {% block htmltitle %}
       {% if page and page.meta and page.meta.title %}
@@ -54,7 +54,7 @@
       {% endif %}
     {% endblock %}
     {% block libs %}
-      <script src="{{ base_url }}/assets/javascripts/modernizr.b301d444.js"></script>
+      <script src="{{ base_url }}/assets/javascripts/modernizr.6586f7cd.js"></script>
     {% endblock %}
     {% block fonts %}
       <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
@@ -170,7 +170,7 @@
       {% endblock %}
     </div>
     {% block scripts %}
-      <script src="{{ base_url }}/assets/javascripts/application.044f2a1a.js"></script>
+      <script src="{{ base_url }}/assets/javascripts/application.f4eda793.js"></script>
       {% if lang.t("search.language") != "en" %}
         {% set languages = lang.t("search.language").split(",") %}
         {% if languages | length and languages[0] != "" %}
