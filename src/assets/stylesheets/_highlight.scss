@@ -7,15 +7,15 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
 .hljs-comment,
 .hljs-quote {
-  color: #998;
+  color: #999988;
   font-style: italic;
 }
 
 .hljs-keyword,
 .hljs-selector-tag,
 .hljs-subst {
-  color: #333;
-  font-weight: bold;
+  color: #333333;
+  font-weight: 700;
 }
 
 .hljs-number,
@@ -28,31 +28,31 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
 .hljs-string,
 .hljs-doctag {
-  color: #d14;
+  color: #DD1144;
 }
 
 .hljs-title,
 .hljs-section,
 .hljs-selector-id {
-  color: #900;
-  font-weight: bold;
+  color: #990000;
+  font-weight: 700;
 }
 
 .hljs-subst {
-  font-weight: normal;
+  font-weight: 400;
 }
 
 .hljs-type,
 .hljs-class .hljs-title {
-  color: #458;
-  font-weight: bold;
+  color: #445588;
+  font-weight: 700;
 }
 
 .hljs-tag,
 .hljs-name,
 .hljs-attribute {
   color: #000080;
-  font-weight: normal;
+  font-weight: 400;
 }
 
 .hljs-regexp,
@@ -67,20 +67,20 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
 .hljs-built_in,
 .hljs-builtin-name {
-  color: #0086b3;
+  color: #0086B3;
 }
 
 .hljs-meta {
-  color: #999;
-  font-weight: bold;
+  color: #999999;
+  font-weight: 700;
 }
 
 .hljs-deletion {
-  background: #fdd;
+  background: #FFDDDD;
 }
 
 .hljs-addition {
-  background: #dfd;
+  background: #DDFFDD;
 }
 
 .hljs-emphasis {
@@ -88,5 +88,5 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 }
 
 .hljs-strong {
-  font-weight: bold;
+  font-weight: 700;
 }
