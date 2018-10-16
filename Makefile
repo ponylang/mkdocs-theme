@@ -65,8 +65,24 @@ watch-mkdocs: clean
 # Run Webpack and MkDocs in watch mode
 watch: node_modules watch-webpack watch-mkdocs
 
+# setup and update crucial resources into the virtualenv
+venv:
+	python -m venv venv
+
+populate-venv: venv
+	. venv/bin/activate && \
+	pip install -U pip setuptools twine wheel && \
+	pip install -r requirements.txt
+
+python-packages: populate-venv
+	. venv/bin/activate &&\
+		python setup.py sdist bdist_wheel
+
+upload-to-pypi: python-packages
+	. venv/bin/activate && \
+		twine upload dist/*
 # -----------------------------------------------------------------------------
 
 # Special targets
-.PHONY: .FORCE build clean lint watch watch-mkdocs watch-webpack
+.PHONY: .FORCE build clean lint watch watch-mkdocs watch-webpack upload-to-pypi populate-venv
 .FORCE:
