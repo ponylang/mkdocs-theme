@@ -22,6 +22,14 @@
 language: node_js
 sudo: false
 
+notifications:
+  email: false
+  irc:
+    channels:
+      - "chat.freenode.net#ponylang"
+    on_success: change
+    on_failure: change
+
 # Node.js version and necessary services
 node_js: 10
 services:
