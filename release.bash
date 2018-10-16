@@ -31,7 +31,7 @@ git checkout -b "release-$VERSION" "$COMMIT"
 
 # clean
 echo "Cleaning up..."
-git clean
+git clean -f
 make clean
 echo "Done."
 
@@ -41,7 +41,7 @@ sed -i -e 's/  "version": "[0-9.]\+",/  "version": "'"$VERSION"'",/' package.jso
 git add package.json
 
 # build fresh version of theme
-make clean build
+make build
 git add .
 
 git commit -m"Prepare for $VERSION release
