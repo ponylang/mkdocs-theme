@@ -53,52 +53,59 @@ import Material from "./components/Material"
 
 /* Import Highlight.js and languages from node_modules */
 import hljs from "highlight.js/lib/highlight.js"
-import hljs_pony from "highlight.js/lib/languages/pony"
-import hljs_cpp from "highlight.js/lib/languages/cpp"
-import hljs_json from "highlight.js/lib/languages/json"
-import hljs_bash from "highlight.js/lib/languages/bash"
-import hljs_markdown from "highlight.js/lib/languages/markdown"
+import hljsPony from "highlight.js/lib/languages/pony"
+import hljsCpp from "highlight.js/lib/languages/cpp"
+import hljsJson from "highlight.js/lib/languages/json"
+import hljsBash from "highlight.js/lib/languages/bash"
+import hljsMarkdown from "highlight.js/lib/languages/markdown"
+
 /* Register all languages plus pony-full-source */
-hljs.registerLanguage("pony", hljs_pony);
-hljs.registerLanguage("pony-full-source", hljs_pony);
-hljs.registerLanguage("cpp", hljs_cpp);
-hljs.registerLanguage("json", hljs_json);
-hljs.registerLanguage("bash", hljs_bash);
-hljs.registerLanguage("markdown", hljs_markdown);
-const hljs_code_blocks = document.querySelectorAll("pre code")
-Array.prototype.forEach.call(hljs_code_blocks, code_block => {
-  hljs.highlightBlock(code_block)
+hljs.registerLanguage("pony", hljsPony)
+hljs.registerLanguage("pony-full-source", hljsPony)
+hljs.registerLanguage("cpp", hljsCpp)
+hljs.registerLanguage("json", hljsJson)
+hljs.registerLanguage("bash", hljsBash)
+hljs.registerLanguage("markdown", hljsMarkdown)
+
+const hljsCodeBlocks = document.querySelectorAll("pre code")
+Array.prototype.forEach.call(hljsCodeBlocks, codeBlock => {
+  hljs.highlightBlock(codeBlock)
+
   /* Add CodeHilite format only to Pony full source code blocks */
-  if (!(code_block.classList.contains("pony-full-source"))) return
+  if (!(codeBlock.classList.contains("pony-full-source"))) return
+
   /* Add no-sidebar class when displaying full source code */
   const content = document.querySelector(".md-content:not(.no-sidebar)")
   if (content) {
     content.classList.add("no-sidebar")
   }
+
   /* Add codehilite class to code block */
-  const code_pre = code_block.parentNode
-  code_pre.className = "codehilite"
+  const codePre = codeBlock.parentNode
+  codePre.className = "codehilite"
+
   /* Generate line numbers with links and anchors */
-  const line_number_pre = document.createElement("pre")
-  const line_count = code_block.innerText.split("\n").length - 1
-  for (var i = 1; i <= line_count; i++) {
-    const line_number = (
+  const lineNumberPre = document.createElement("pre")
+  const lineCount = codeBlock.innerText.split("\n").length - 1
+  for (let i = 1; i <= lineCount; i++) {
+    const lineNumber = (
       <div id={`L${i}`}>
         <a href={`#L${i}`}>
           {i}
         </a>
       </div>
     )
-    line_number_pre.appendChild(line_number)
+    lineNumberPre.appendChild(lineNumber)
   }
+
   /* Create full CodeHilite table */
-  const codehilite_table = (
+  const codehiliteTable = (
     <table class="codehilitetable">
       <tbody>
         <tr>
           <td class="linenos">
             <div class="linenodiv">
-              {line_number_pre}
+              {lineNumberPre}
             </div>
           </td>
           <td class="code">
@@ -107,9 +114,10 @@ Array.prototype.forEach.call(hljs_code_blocks, code_block => {
       </tbody>
     </table>
   )
+
   /* Replace previous code block with CodeHilite table */
-  code_pre.parentNode.insertBefore(codehilite_table, code_pre)
-  codehilite_table.querySelector("td.code").appendChild(code_pre)
+  codePre.parentNode.insertBefore(codehiliteTable, codePre)
+  codehiliteTable.querySelector("td.code").appendChild(codePre)
 })
 
 /* ----------------------------------------------------------------------------

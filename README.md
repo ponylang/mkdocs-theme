@@ -68,7 +68,11 @@ Extra customization options are available in the [Material theme documentation](
 
 ## Development
 
-You must have `virtualenv` and `npm` installed.
+### Requirements
+
+* Python 3
+* npm
+* libpng-dev
 
 ### Installation
 
@@ -77,7 +81,7 @@ This will set up all of the necessary packages to install the theme locally.
 ```sh
 git clone https://github.com/ponylang/mkdocs-theme
 cd mkdocs-theme
-virtualenv venv
+python -m  venv venv
 source venv/bin/activate
 pip install -e .
 npm install
@@ -94,6 +98,8 @@ npm run build
 ### Distribution
 
 Upload to PyPI with Twine:
+
+Remember to use the python from the virtualenv you created above.
 
 ```sh
 rm dist/*

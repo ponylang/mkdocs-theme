@@ -23,7 +23,7 @@ language: node_js
 sudo: false
 
 # Node.js version and necessary services
-node_js: 8
+node_js: 10
 services:
   - docker
 
@@ -39,10 +39,13 @@ cache:
 
 # Install dependencies
 install:
+  - pyenv global 3.6
   - npm install
-  - pip install --user -r requirements.txt
+  - pip3 install --user -r requirements.txt
 
-# Perform build
+# Perform build and test the python packaging
 script:
   - npm run lint
   - npm run build
+  - pip3 install -e .
+  - python setup.py sdist bdist_wheel
