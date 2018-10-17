@@ -45,7 +45,7 @@
 
   <!-- Render item list -->
   {% if toc_ | first is defined %}
-    <label class="md-nav__title" for="toc">{{ lang.t("toc.title") }}</label>
+    <label class="md-nav__title" for="__toc">{{ lang.t("toc.title") }}</label>
     <ul class="md-nav__list" data-md-scrollfix>
       {% for toc_item in toc_ %}
         {% with level = max_toc_depth - 1 %}

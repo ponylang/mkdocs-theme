@@ -56,7 +56,8 @@ then
     echo "ERROR! There are local-only changes on branch 'release'!"
     exit 1
 fi
-git merge -s ours "release-$VERSION" -m "Release $VERSION"
+# version change will include a conflict, resolve it by using the version from the release branch
+git merge -s recursive -X theirs "release-$VERSION" -m "Release $VERSION"
 
 git tag "$VERSION"
 
