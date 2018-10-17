@@ -56,7 +56,7 @@ then
     echo "ERROR! There are local-only changes on branch 'release'!"
     exit 1
 fi
-git merge "release-$VERSION" -m "Release $VERSION"
+git merge -s ours "release-$VERSION" -m "Release $VERSION"
 
 git tag "$VERSION"
 
@@ -76,5 +76,6 @@ echo "Done."
 echo "Merging back to master..."
 git checkout master
 git merge "release-$VERSION"
+git push origin master
 echo "Done."
 
