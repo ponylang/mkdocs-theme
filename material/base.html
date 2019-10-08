@@ -48,13 +48,13 @@
       {% endif %}
     {% endblock %}
     {% block styles %}
-      <link rel="stylesheet" href="{{ 'assets/stylesheets/application.dfc6cb0c.css' | url }}">
+      <link rel="stylesheet" href="{{ 'assets/stylesheets/application.b80b25f7.css' | url }}">
       {% if palette.primary or palette.accent %}
         <link rel="stylesheet" href="{{ 'assets/stylesheets/application-palette.6079476c.css' | url }}">
       {% endif %}
     {% endblock %}
     {% block libs %}
-      <script src="{{ 'assets/javascripts/modernizr.6586f7cd.js' | url }}"></script>
+      <script src="{{ 'assets/javascripts/modernizr.0b5df86e.js' | url }}"></script>
     {% endblock %}
     {% block fonts %}
       <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
@@ -170,7 +170,7 @@
       {% endblock %}
     </div>
     {% block scripts %}
-    <script src="{{ 'assets/javascripts/application.6f02ae1b.js' | url }}"></script>
+    <script src="{{ 'assets/javascripts/application.866df219.js' | url }}"></script>
       {% if lang.t("search.language") != "en" %}
         {% set languages = lang.t("search.language").split(",") %}
         {% if languages | length and languages[0] != "" %}
