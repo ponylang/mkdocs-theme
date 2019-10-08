@@ -19,19 +19,12 @@
 # FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 # IN THE SOFTWARE.
 
-language: node_js
+language: python
 sudo: false
 
-notifications:
-  email: false
-  irc:
-    channels:
-      - "chat.freenode.net#ponylang"
-    on_success: change
-    on_failure: change
-
-# Node.js version and necessary services
-node_js: 10
+# Python, Node.js version and necessary services
+python: "3.6"
+node_js: "8"
 services:
   - docker
 
@@ -47,9 +40,8 @@ cache:
 
 # Install dependencies
 install:
-  - pyenv global 3.6
   - npm install
-  - pip3 install --user -r requirements.txt
+  - pip install -r requirements.txt
 
 # Perform build and test the python packaging
 script:
