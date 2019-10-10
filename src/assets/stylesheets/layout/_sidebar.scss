@@ -103,6 +103,15 @@ $md-toggle__drawer--checked:
     }
   }
 
+  // Primary sidebar with sections
+  &--primary {
+
+    // No line breaks for links
+    .md-nav__link {
+      white-space: nowrap
+    }
+  }
+
   // Secondary sidebar with table of contents
   &--secondary {
     display: none;
