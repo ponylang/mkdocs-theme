@@ -72,7 +72,7 @@ Array.prototype.forEach.call(hljsCodeBlocks, codeBlock => {
   hljs.highlightBlock(codeBlock)
 
   /* Add CodeHilite format only to Pony full source code blocks */
-  if (!(codeBlock.classList.contains("pony-full-source"))) return
+  if (!(codeBlock.classList.contains("language-pony-full-source") || codeBlock.classList.contains("pony-full-source"))) return
 
   /* Add no-sidebar class when displaying full source code */
   const content = document.querySelector(".md-content:not(.no-sidebar)")
