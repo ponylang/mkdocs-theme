@@ -36,7 +36,7 @@
         <meta name="lang:{{ key }}" content="{{ lang.t(key) }}">
       {% endfor %}
       <link rel="shortcut icon" href="{{ config.theme.favicon | url }}">
-      <meta name="generator" content="mkdocs-{{ mkdocs_version }}, mkdocs-ponylang-0.2.6">
+      <meta name="generator" content="mkdocs-{{ mkdocs_version }}, mkdocs-ponylang-0.2.7">
     {% endblock %}
     {% block htmltitle %}
       {% if page and page.meta and page.meta.title %}
@@ -170,7 +170,7 @@
       {% endblock %}
     </div>
     {% block scripts %}
-    <script src="{{ 'assets/javascripts/application.c1ad9e36.js' | url }}"></script>
+    <script src="{{ 'assets/javascripts/application.cb37bb38.js' | url }}"></script>
       {% if lang.t("search.language") != "en" %}
         {% set languages = lang.t("search.language").split(",") %}
         {% if languages | length and languages[0] != "" %}
