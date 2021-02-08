@@ -26,8 +26,3 @@ pymdown-extensions>=3.4
 
 # Markdown description support in Warehouse
 setuptools>=38.6.0
-
-# PyPI publishing
-twine>=1.11.0
-wheel>=0.31.0
-

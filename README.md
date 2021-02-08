@@ -81,7 +81,7 @@ This will set up all of the necessary packages to install the theme locally.
 ```sh
 git clone https://github.com/ponylang/mkdocs-theme
 cd mkdocs-theme
-python -m  venv venv
+python -m venv venv
 source venv/bin/activate
 pip install -e .
 npm install
@@ -97,12 +97,9 @@ npm run build
 
 ### Distribution
 
-Upload to PyPI with Twine:
-
-Remember to use the python from the virtualenv you created above.
+Upload to PyPI with Twine by calling the following Makefile targets:
 
 ```sh
-rm dist/*
-python setup.py sdist bdist_wheel
-twine upload dist/*
+make clean
+make upload-to-pypi
 ```
