@@ -1,5 +1,5 @@
 hero: Metadata enables hero teaser texts
-path: tree/master/docs/extensions
+path: tree/main/docs/extensions
 source: metadata.md
 
 # Metadata
@@ -65,7 +65,7 @@ be prefixed with a `path` to ensure correct path resolving:
 Example:
 
 ``` markdown
-path: tree/master/docs/extensions
+path: tree/main/docs/extensions
 source: metadata.md
 ```
 

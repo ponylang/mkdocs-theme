@@ -51,7 +51,7 @@ Some things to note that aren't immediately obvious to folks just starting out:
 
 1. Your fork doesn't automatically stay up to date with change in the main repo.
 2. Any changes you make on your branch that you used for the PR will automatically appear in the PR so if you have more than 1 PR, be sure to always create different braches for them.
-3. Weird things happen with commit history if you dont create your PR branches off of master so always make sure you have the master branch checked out before creating a branch for a PR
+3. Weird things happen with commit history if you dont create your PR branches off of main so always make sure you have the main branch checked out before creating a branch for a PR
 
 If you feel overwhelmed at any point, don't worry, it can be a lot to learn when you get started. Feel free to reach out via [Slack](https://www.ponylang.io/get-slack-invite) or the [pony developer mailing list](https://pony.groups.io/g/dev) for assistance.
 
