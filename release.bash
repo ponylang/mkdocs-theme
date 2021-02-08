@@ -18,12 +18,12 @@ while true; do
 done
 
 # create git release
-git checkout master
+git checkout main
 git pull
 
-if ! git diff --exit-code master origin/master
+if ! git diff --exit-code main origin/main
 then
-    echo "ERROR! There are local-only changes on branch 'master'!"
+    echo "ERROR! There are local-only changes on branch 'main'!"
     exit 1
 fi
 
@@ -73,10 +73,10 @@ echo "Uploading Python Packages to PyPI..."
 make upload-to-pypi
 echo "Done."
 
-# merge back to master
-echo "Merging back to master..."
-git checkout master
+# merge back to main
+echo "Merging back to main..."
+git checkout main
 git merge "release-$VERSION"
-git push origin master
+git push origin main
 echo "Done."
 
